@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOOR Al-FAJR - Premium Packaging Solutions</title>
+    <title>NOOR Al-FAJR — Premium Packaging Solutions | UAE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -13,15 +13,13 @@
         }
 
         :root {
-            --primary: #0f172a;
-            --secondary: #1e40af;
+            --primary: #0f1419;
+            --secondary: #1a1f2e;
             --accent: #ff6b35;
             --accent-light: #ffa500;
-            --text: #f1f5f9;
-            --text-dark: #0f172a;
-            --bg-dark: #0a0e27;
-            --bg-light: #f8fafc;
-            --border: #e2e8f0;
+            --text: #f8f9fa;
+            --text-muted: #9ca3af;
+            --border: #2a2f3f;
         }
 
         html {
@@ -30,284 +28,228 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg-dark);
+            background: var(--primary);
             color: var(--text);
-            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* ===== ANIMATED BACKGROUND ===== */
-        .animated-bg {
-            position: fixed;
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: white;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(-45deg, #0f172a, #1e40af, #ff6b35, #0a0e27);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            z-index: -2;
+            z-index: 999;
         }
 
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .animated-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 14, 39, 0.8);
-            z-index: -1;
+        .announcement-bar p {
+            margin: 0;
         }
 
         /* ===== HEADER ===== */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(20px);
-            background: rgba(10, 14, 39, 0.7);
-            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
-            padding: 1rem 0;
+            background: var(--secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 50px;
+            z-index: 998;
+            backdrop-filter: blur(10px);
         }
 
-        nav {
+        .header-container {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            gap: 2rem;
         }
 
-        .logo {
+        .brand-logo {
             font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff6b35, #ffa500);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-decoration: none;
             letter-spacing: -1px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .logo i {
-            font-size: 1.5rem;
+        .desktop-nav {
+            flex: 1;
         }
 
-        nav ul {
+        .nav-list {
             display: flex;
             list-style: none;
             gap: 3rem;
+            align-items: center;
         }
 
-        nav a {
-            color: rgba(241, 245, 249, 0.8);
+        .nav-item {
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
             transition: color 0.3s;
+            position: relative;
         }
 
-        nav a::after {
+        .nav-item:hover {
+            color: var(--accent);
+        }
+
+        .nav-item::after {
             content: '';
             position: absolute;
             bottom: -8px;
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #ff6b35, #ffa500);
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--accent);
+            transition: width 0.3s;
         }
 
-        nav a:hover {
-            color: #ff6b35;
-        }
-
-        nav a:hover::after {
+        .nav-item:hover::after {
             width: 100%;
         }
 
+        .header-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .action-btn:hover {
+            color: var(--accent);
+        }
+
+        .icon-wrapper {
+            position: relative;
+        }
+
+        .action-counter {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1.5rem;
-                font-size: 0.85rem;
+            .desktop-nav {
+                display: none;
             }
-            nav {
-                padding: 0 1rem;
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-list {
+                gap: 1rem;
+            }
+            .header-container {
+                gap: 1rem;
             }
         }
 
         /* ===== HERO SECTION ===== */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, var(--secondary) 0%, rgba(255, 107, 53, 0.05) 100%);
+            padding: 4rem 2rem;
             text-align: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            top: 50%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(30, 64, 175, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: 10%;
-            right: 5%;
-            animation: float 10s ease-in-out infinite 2s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(30px) scale(1.05); }
+            border-bottom: 1px solid var(--border);
         }
 
         .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 10;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #fff, #ff6b35, #ffa500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease-out 0.1s backwards;
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            color: rgba(241, 245, 249, 0.8);
-            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            animation: fadeInUp 1s ease-out 0.2s backwards;
         }
 
-        .cta-buttons {
+        .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.3s backwards;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            border: none;
             font-weight: 600;
-            font-size: 1rem;
             cursor: pointer;
-            border: 2px solid transparent;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: left 0.3s;
-            z-index: -1;
-        }
-
-        .btn:hover::before {
-            left: 0;
+            transition: all 0.3s;
+            font-size: 1rem;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #ff6b35, #ffa500);
             color: white;
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
         }
 
         .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: #ff6b35;
-            border-color: #ff6b35;
+            background: var(--secondary);
+            color: var(--accent);
+            border: 1px solid var(--accent);
         }
 
         .btn-secondary:hover {
             background: rgba(255, 107, 53, 0.1);
-            transform: translateY(-4px);
-        }
-
-        /* ===== FLOATING CARDS ===== */
-        .floating-cards {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .card-float {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            border-radius: 20px;
-            animation: float 6s ease-in-out infinite;
-            backdrop-filter: blur(10px);
         }
 
         /* ===== CONTAINER ===== */
@@ -317,328 +259,171 @@
             padding: 0 2rem;
         }
 
-        /* ===== SECTION STYLES ===== */
-        section {
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        section h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff, #ff6b35);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        /* ===== SECTION TITLE ===== */
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
         }
 
         .section-subtitle {
-            font-size: 1.1rem;
-            color: rgba(241, 245, 249, 0.6);
-            margin-bottom: 4rem;
-            max-width: 600px;
-        }
-
-        /* ===== ABOUT SECTION ===== */
-        .about {
-            background: rgba(30, 64, 175, 0.05);
-            border-top: 1px solid rgba(255, 107, 53, 0.1);
-            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #ff6b35;
-        }
-
-        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
             font-size: 1rem;
-            color: rgba(241, 245, 249, 0.7);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .features-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            padding: 1rem;
-            border-radius: 12px;
-            background: rgba(255, 107, 53, 0.05);
-            border: 1px solid rgba(255, 107, 53, 0.1);
-            transition: all 0.3s;
-        }
-
-        .feature-item:hover {
-            background: rgba(255, 107, 53, 0.1);
-            transform: translateX(10px);
-            border-color: rgba(255, 107, 53, 0.3);
-        }
-
-        .feature-item i {
-            color: #ff6b35;
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
-        }
-
-        .feature-item p {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
         }
 
         /* ===== PRODUCTS SECTION ===== */
-        .products {
-            background: var(--bg-dark);
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-btn {
+            background: var(--secondary);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
         }
 
         .product-card {
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(255, 107, 53, 0.05));
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
             overflow: hidden;
+            transition: all 0.3s;
             cursor: pointer;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, transparent 70%);
-            transition: all 0.6s;
-            opacity: 0;
         }
 
         .product-card:hover {
-            transform: translateY(-15px);
-            border-color: rgba(255, 107, 53, 0.5);
-            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.2);
+            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
         }
 
-        .product-card:hover::before {
-            opacity: 1;
-            top: 50%;
-            left: 50%;
-        }
-
-        .product-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            transition: all 0.4s;
-            display: inline-block;
-        }
-
-        .product-card:hover .product-icon {
-            transform: scale(1.2) rotate(-10deg);
-        }
-
-        .product-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #ff6b35;
-            font-weight: 700;
-        }
-
-        .product-card p {
-            color: rgba(241, 245, 249, 0.6);
-            line-height: 1.6;
-        }
-
-        /* ===== SERVICES SECTION ===== */
-        .services {
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.05), rgba(255, 107, 53, 0.02));
-            border-top: 1px solid rgba(255, 107, 53, 0.1);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.4s;
-            position: relative;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255, 107, 53, 0.1), transparent);
-            transition: width 0.4s;
-            border-radius: 16px;
-            pointer-events: none;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(255, 107, 53, 0.5);
-            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
-        }
-
-        .service-card:hover::after {
+        .product-image {
             width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 165, 0, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border-bottom: 1px solid var(--border);
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            color: #ff6b35;
-            margin-bottom: 1rem;
+        .product-info {
+            padding: 1.5rem;
         }
 
-        .service-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .service-card p {
-            color: rgba(241, 245, 249, 0.6);
-            line-height: 1.7;
-        }
-
-        /* ===== CONTACT SECTION ===== */
-        .contact {
-            background: var(--bg-dark);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-card {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(30, 64, 175, 0.1));
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.4s;
-            text-align: center;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.2);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            color: #ff6b35;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-            color: #fff;
+        .product-category {
+            font-size: 0.85rem;
+            color: var(--accent);
             font-weight: 600;
-        }
-
-        .contact-card p {
-            color: rgba(241, 245, 249, 0.7);
             margin-bottom: 0.5rem;
         }
 
-        .contact-card a {
-            color: #ff6b35;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .contact-card a:hover {
-            color: #ffa500;
-        }
-
-        /* ===== SERVICE AREAS ===== */
-        .service-areas {
-            margin-top: 4rem;
-            padding: 2rem;
-            background: rgba(255, 107, 53, 0.05);
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            border-radius: 16px;
-        }
-
-        .service-areas h3 {
-            color: #ff6b35;
-            margin-bottom: 1.5rem;
+        .product-name {
+            font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
+        .product-description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.5;
         }
 
-        .area-tag {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 165, 0, 0.1));
-            color: #ff6b35;
-            padding: 1rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 107, 53, 0.3);
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .add-to-cart-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            cursor: pointer;
         }
 
-        .area-tag:hover {
-            background: linear-gradient(135deg, #ff6b35, #ffa500);
-            color: white;
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+        .add-to-cart-btn:hover {
+            background: var(--accent-light);
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.1));
-            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            background: var(--secondary);
+            border-top: 1px solid var(--border);
             padding: 3rem 0 1rem;
             margin-top: 4rem;
         }
@@ -654,318 +439,262 @@
         }
 
         .footer-section h4 {
-            color: #ff6b35;
-            margin-bottom: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .footer-section a {
-            color: rgba(241, 245, 249, 0.7);
+            color: var(--text-muted);
             text-decoration: none;
-            transition: all 0.3s;
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: #ff6b35;
-            transform: translateX(5px);
+            color: var(--accent);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 107, 53, 0.2);
-            color: rgba(241, 245, 249, 0.6);
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        /* ===== CART SIDEBAR ===== */
+        .cart-sidebar {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 400px;
+            height: 100vh;
+            background: var(--secondary);
+            border-left: 1px solid var(--border);
+            z-index: 1000;
+            transition: right 0.3s;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .cart-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .cart-item-price {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            section {
-                padding: 3rem 0;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .products-grid,
-            .services-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .areas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            nav ul {
-                gap: 0.8rem;
-                font-size: 0.8rem;
+            .hero {
+                padding: 2rem 1rem;
             }
 
             .container {
                 padding: 0 1rem;
             }
 
-            .areas-grid {
-                grid-template-columns: 1fr;
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1rem;
             }
-        }
 
-        /* ===== SCROLL ANIMATION ===== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
+            .product-image {
+                height: 200px;
+                font-size: 3rem;
+            }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+
+            .nav-list {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="animated-bg"></div>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🚚 FREE DELIVERY ACROSS UAE ON ORDERS OVER AED 500 | BULK DISCOUNTS AVAILABLE</p>
+    </div>
 
     <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-cube"></i>
-                NOOR Al-FAJR
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="brand-logo">
+                <i class="fas fa-cube"></i> NOOR Al-FAJR
+            </a>
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="#new" class="nav-item">New Arrivals</a></li>
+                    <li><a href="#boxes" class="nav-item" data-category="boxes">Boxes</a></li>
+                    <li><a href="#films" class="nav-item" data-category="films">Films & Wraps</a></li>
+                    <li><a href="#tapes" class="nav-item" data-category="tapes">Tapes</a></li>
+                    <li><a href="#supplies" class="nav-item" data-category="supplies">Supplies</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="action-btn" title="Search">
+                    <i class="fas fa-search"></i>
+                    <span class="action-label">Search</span>
+                </button>
+                <button class="action-btn" title="Account">
+                    <i class="fas fa-user"></i>
+                    <span class="action-label">Account</span>
+                </button>
+                <button class="action-btn" title="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="action-label">Wishlist</span>
+                </button>
+                <button class="action-btn" id="cartBtn" title="Cart">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="action-counter" id="cartCount">0</span>
+                    </div>
+                    <span class="action-label">Cart</span>
+                </button>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="floating-cards"></div>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>Premium Packaging Solutions for Modern Businesses</h1>
-            <p>Custom packaging, eco-friendly materials, and professional branding services across the UAE</p>
-            <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                    <i class="fas fa-phone"></i> Get Quote Now
+            <h1>Premium Packaging Solutions</h1>
+            <p>Quality materials, fast delivery, competitive prices. Everything you need for your packaging business.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-shopping-bag"></i> Shop Now
                 </button>
-                <button class="btn btn-secondary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
-                    <i class="fas fa-box"></i> Explore Products
+                <button class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i> Learn More
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about" id="about">
+    <!-- Products Section -->
+    <section class="products-section" id="products">
         <div class="container">
-            <h2>About NOOR Al-FAJR</h2>
-            <div class="section-subtitle">Leading packaging supplier in the UAE since 2020</div>
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Explore our complete range of packaging materials</p>
 
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Your Trusted Packaging Partner</h3>
-                    <p>NOOR Al-FAJR is a leading supplier of comprehensive packaging solutions. Based in Sharjah Industrial Area, we serve businesses across all emirates with quality products and professional services.</p>
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>Wide Product Range</strong> - Everything from boxes to tapes</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-leaf"></i>
-                            <p><strong>Eco-Friendly Options</strong> - Sustainable packaging solutions</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-truck"></i>
-                            <p><strong>Fast Delivery</strong> - Same-day delivery across UAE</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-headset"></i>
-                            <p><strong>24/7 Support</strong> - Multilingual customer service</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3>Our Services</h3>
-                    <p>We provide comprehensive solutions tailored to your business needs:</p>
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <i class="fas fa-cube"></i>
-                            <p><strong>Custom Packaging Design</strong></p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-palette"></i>
-                            <p><strong>Branding & Labeling Services</strong></p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-boxes"></i>
-                            <p><strong>Bulk Order Solutions</strong></p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-ship"></i>
-                            <p><strong>Cargo Packaging</strong></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="boxes">📦 Boxes</button>
+                <button class="filter-btn" data-filter="films">🌊 Films & Wraps</button>
+                <button class="filter-btn" data-filter="tapes">🎯 Tapes</button>
+                <button class="filter-btn" data-filter="supplies">🧤 Supplies</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be inserted here by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Products -->
-    <section class="products" id="products">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
-            <h2>Our Products</h2>
-            <div class="section-subtitle">Complete range of packaging materials and solutions</div>
-
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <div class="product-icon">📦</div>
-                    <h3>Corrugated Boxes</h3>
-                    <p>Custom and standard corrugated boxes for all shipping needs</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-description">Same-day delivery across UAE emirates</p>
                 </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">🛍️</div>
-                    <h3>Plastic & Paper Bags</h3>
-                    <p>Quality bags for retail and wholesale distribution</p>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Best Prices</h3>
+                    <p class="feature-description">Competitive rates with bulk discounts</p>
                 </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">🌊</div>
-                    <h3>Bubble Wrap & Films</h3>
-                    <p>Protective materials for fragile items</p>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3 class="feature-title">Quality Assured</h3>
+                    <p class="feature-description">Premium materials guaranteed</p>
                 </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">🧤</div>
-                    <h3>Safety Gloves</h3>
-                    <p>Industrial and workplace safety gloves</p>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">📄</div>
-                    <h3>Foam & Thermocol</h3>
-                    <p>Premium protective cushioning materials</p>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">🎁</div>
-                    <h3>Custom Packaging</h3>
-                    <p>Personalized and branded packaging solutions</p>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">📦</div>
-                    <h3>Specialty Boxes</h3>
-                    <p>Laptop, electronic, and appliance boxes</p>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-icon">🎯</div>
-                    <h3>Tapes & Strapping</h3>
-                    <p>Professional sealing and securing materials</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="section-subtitle">Comprehensive solutions for all your packaging needs</div>
-
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-truck"></i></div>
-                    <h3>Fast Delivery</h3>
-                    <p>Quick and reliable delivery to all UAE emirates with competitive rates</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h3>Showroom Shopping</h3>
-                    <p>Visit our Sharjah showroom to browse and purchase products</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-box"></i></div>
-                    <h3>In-Store Pickup</h3>
-                    <p>Place orders online and pick up at your convenience</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>Design Services</h3>
-                    <p>Professional packaging design and branding solutions</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Eco-Friendly Options</h3>
-                    <p>Sustainable and environmentally responsible packaging</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
-                    <h3>Bulk Orders</h3>
-                    <p>Special pricing for large volume orders and corporate clients</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="section-subtitle">Multiple ways to reach us</div>
-
-            <div class="contact-grid">
-                <div class="contact-card fade-in">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Visit Us</h3>
-                    <p>Industrial Area 6, Backside of 1-10 Discount Market<br>Sharjah, UAE 39000</p>
-                </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:+971552383697">+971 55 238 3697</a></p>
-                    <p style="font-size: 0.9rem; color: rgba(241, 245, 249, 0.5);">Available 24/7</p>
-                </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:nooralfajrpck@gmail.com">nooralfajrpck@gmail.com</a></p>
-                    <p style="font-size: 0.9rem; color: rgba(241, 245, 249, 0.5);">Response within 24h</p>
-                </div>
-            </div>
-
-            <div class="service-areas">
-                <h3><i class="fas fa-map"></i> Service Areas - All 8 Emirates</h3>
-                <div class="areas-grid">
-                    <div class="area-tag">🏙️ Sharjah</div>
-                    <div class="area-tag">🌆 Dubai</div>
-                    <div class="area-tag">🏢 Abu Dhabi</div>
-                    <div class="area-tag">⛰️ Fujairah</div>
-                    <div class="area-tag">🏔️ Ras Al Khaimah</div>
-                    <div class="area-tag">🏘️ Ajman</div>
-                    <div class="area-tag">🌴 Umm Al Qaiwain</div>
-                    <div class="area-tag">🎯 Al Ain</div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-description">Multilingual customer service</p>
                 </div>
             </div>
         </div>
@@ -976,73 +705,166 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>About Us</h4>
-                <a href="#about">Company Overview</a>
-                <a href="#products">Our Products</a>
-                <a href="#services">Services</a>
+                <a href="#">Company Overview</a>
+                <a href="#">Our Services</a>
+                <a href="#">Sustainability</a>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#contact">Contact Us</a>
-                <a href="tel:+971552383697">Call Us</a>
-                <a href="mailto:nooralfajrpck@gmail.com">Email Us</a>
+                <h4>Contact</h4>
+                <a href="tel:+971552383697">📞 +971 55 238 3697</a>
+                <a href="mailto:nooralfajrpck@gmail.com">✉️ nooralfajrpck@gmail.com</a>
+                <a href="#">📍 Sharjah, UAE</a>
             </div>
             <div class="footer-section">
-                <h4>Languages</h4>
-                <a href="#">English</a>
-                <a href="#">Urdu</a>
-                <a href="#">Hindi</a>
-                <a href="#">Arabic</a>
+                <h4>Service Areas</h4>
+                <a href="#">Sharjah & Dubai</a>
+                <a href="#">Abu Dhabi</a>
+                <a href="#">All Emirates</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 NOOR Al-FAJR Packing & Packaging Material Trading. All rights reserved.</p>
-            <p>Industrial Area 6, Sharjah, UAE | +971 55 238 3697</p>
+            <p>&copy; 2026 NOOR Al-FAJR. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="text-align: center; color: var(--text-muted);">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">AED 0</span>
+            </div>
+            <button class="checkout-btn">
+                <i class="fas fa-credit-card"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
     <script>
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Product Data
+        const products = [
+            { id: 1, name: 'Corrugated Boxes', category: 'boxes', price: 250, emoji: '📦', desc: 'Standard & custom boxes' },
+            { id: 2, name: 'Laptop Boxes', category: 'boxes', price: 150, emoji: '💻', desc: 'Protective laptop packaging' },
+            { id: 3, name: 'Bubble Wrap', category: 'films', price: 180, emoji: '🌊', desc: 'Protective bubble material' },
+            { id: 4, name: 'Stretch Film', category: 'films', price: 120, emoji: '🎬', desc: 'High-quality wrapping film' },
+            { id: 5, name: 'Packing Tape', category: 'tapes', price: 45, emoji: '🎯', desc: 'Strong adhesive tape' },
+            { id: 6, name: 'Fragile Tape', category: 'tapes', price: 60, emoji: '⚠️', desc: 'Warning fragile labels' },
+            { id: 7, name: 'Safety Gloves', category: 'supplies', price: 35, emoji: '🧤', desc: 'Industrial work gloves' },
+            { id: 8, name: 'Thermocol Sheets', category: 'supplies', price: 200, emoji: '🛡️', desc: 'Protective cushioning' },
+        ];
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        let cart = [];
+        let currentFilter = 'all';
+
+        // Render Products
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('productsGrid');
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+
+            grid.innerHTML = filtered.map(product => `
+                <div class="product-card">
+                    <div class="product-image">${product.emoji}</div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category.toUpperCase()}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-description">${product.desc}</p>
+                        <div class="product-footer">
+                            <div class="product-price">AED ${product.price}</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter Products
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                renderProducts(currentFilter);
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
         });
 
-        // Smooth scroll for navigation
-        document.querySelectorAll('nav a').forEach(a => {
-            a.addEventListener('click', (e) => {
-                e.preventDefault();
-                const href = a.getAttribute('href');
-                if (href.startsWith('#')) {
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
+        // Add to Cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCart();
+        }
+
+        // Update Cart Display
+        function updateCart() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; color: var(--text-muted);">Your cart is empty</p>';
+                cartTotal.textContent = 'AED 0';
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">AED ${item.price} x ${item.quantity}</div>
+                    </div>
+                    <button style="background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="removeFromCart(${item.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `AED ${total}`;
+        }
+
+        // Remove from Cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+
+        // Cart Sidebar Toggle
+        document.getElementById('cartBtn').addEventListener('click', () => {
+            document.getElementById('cartSidebar').classList.add('active');
         });
 
-        // Add parallax effect on mouse move
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            const floatingCards = document.querySelectorAll('.card-float');
-            floatingCards.forEach((card, index) => {
-                const speed = 20 + index * 5;
-                card.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
+        document.getElementById('cartClose').addEventListener('click', () => {
+            document.getElementById('cartSidebar').classList.remove('active');
         });
+
+        // Initialize
+        renderProducts();
     </script>
 </body>
 </html>
