@@ -19,6 +19,7 @@ const FacebookIcon = ({ size = 20, className = "" }) => (
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const whatsappLink = "https://api.whatsapp.com/send?phone=%2B971552383697&text=Hi%20NOOR%20Al%20FAJR!%20I%20need%20a%20quote%20for%20packaging%20materials.";
   const phone = "+971 55 238 3697";
@@ -74,6 +75,7 @@ export default function App() {
   const products = [
     {
       name: "Heavy Duty Corrugated Box",
+      category: "Corrugated Boxes",
       price: "From AED 45",
       image: "https://images.unsplash.com/photo-1607166452427-7e4477c1e4d0?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
@@ -83,6 +85,7 @@ export default function App() {
     },
     {
       name: "Premium Stretch Film 500mm",
+      category: "Stretch Film",
       price: "From AED 25",
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop",
       badge: "HOT",
@@ -92,6 +95,7 @@ export default function App() {
     },
     {
       name: "Bubble Wrap Roll 100m",
+      category: "Bubble Wrap",
       price: "From AED 15",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
@@ -101,6 +105,7 @@ export default function App() {
     },
     {
       name: "Clear Packing Tape 48mm",
+      category: "Tapes & Adhesives",
       price: "From AED 8",
       image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
       badge: "LIMITED",
@@ -110,6 +115,7 @@ export default function App() {
     },
     {
       name: "Industrial Foam Sheet",
+      category: "Corrugated Boxes",
       price: "From AED 35",
       image: "https://images.unsplash.com/photo-1616401784845-180882f6d9c2?q=80&w=600&auto=format&fit=crop",
       rating: 4.5,
@@ -117,6 +123,7 @@ export default function App() {
     },
     {
       name: "Cleaning Chemical Kit",
+      category: "Cleaning Supplies",
       price: "From AED 120",
       image: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?q=80&w=600&auto=format&fit=crop",
       badge: "HOT",
@@ -126,6 +133,7 @@ export default function App() {
     },
     {
       name: "Masking Tape Roll",
+      category: "Tapes & Adhesives",
       price: "From AED 12",
       image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
@@ -135,6 +143,7 @@ export default function App() {
     },
     {
       name: "Padded Mailer Envelope",
+      category: "Corrugated Boxes",
       price: "From AED 30",
       image: "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=600&auto=format&fit=crop",
       badge: "LIMITED",
@@ -459,6 +468,7 @@ export default function App() {
                 <motion.a
                   key={idx}
                   href="#products"
+                  onClick={() => setActiveCategory(cat.name)}
                   className={`category-card ${cat.highlight ? 'category-card-highlight' : ''}`}
                   variants={itemVariants}
                   whileHover={{ y: -8 }}
@@ -500,6 +510,30 @@ export default function App() {
               </a>
             </div>
 
+            {/* Category Filter Pills */}
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', margin: '20px 0 30px' }}>
+              {['All', 'Corrugated Boxes', 'Stretch Film', 'Bubble Wrap', 'Tapes & Adhesives', 'Cleaning Supplies'].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  style={{
+                    padding: '8px 18px',
+                    borderRadius: '20px',
+                    border: '1px solid',
+                    borderColor: activeCategory === cat ? '#2563EB' : '#e2e8f0',
+                    background: activeCategory === cat ? '#2563EB' : '#ffffff',
+                    color: activeCategory === cat ? '#ffffff' : '#1e293b',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    fontSize: '0.9rem'
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
             <motion.div
               className="products-grid"
               variants={containerVariants}
@@ -507,7 +541,9 @@ export default function App() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
             >
-              {products.map((product, idx) => (
+              {products
+                .filter(p => activeCategory === 'All' || p.category === activeCategory)
+                .map((product, idx) => (
                 <motion.div
                   key={idx}
                   className="product-card"
