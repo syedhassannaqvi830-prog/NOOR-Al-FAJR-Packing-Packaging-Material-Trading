@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Sign In & Register | VELORA — Find What Moves You</title>
+  <meta name="description" content="Sign in or create your VELORA account. Enjoy 10% off your first order, track packages across Pakistan, and get early VIP access to Weekend Drops.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+
+  <!-- Background Glow & Geometry -->
+  <div class="auth-bg-decor" aria-hidden="true">
+    <div class="auth-bg-circle-1"></div>
+    <div class="auth-bg-circle-2"></div>
+  </div>
+
+  <!-- 1. Top Auth Navigation Bar -->
+  <header class="auth-header">
+    <div class="auth-header-container">
+      <!-- Back to Store Link -->
+      <a href="index.html" class="auth-back-link" id="backToStoreBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Store</span>
+      </a>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="auth-brand-logo">
+        VELORA<span class="logo-dot"></span>
+      </a>
+
+      <!-- WhatsApp Help Trigger -->
+      <a href="https://wa.me/923001234567?text=Hi%20VELORA%20Team%2C%20I%20need%20help%20with%20my%20account%20login." target="_blank" rel="noopener noreferrer" class="auth-help-link">
+        <span class="auth-help-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.177.181-.076.355.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
+          </svg>
+          24/7 Help
+        </span>
+        <span>Need Assistance?</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. Main Authentication Content -->
+  <main class="auth-main">
+    <div class="auth-grid">
+
+      <!-- Left Side: VIP Perks Showcase (Desktop) -->
+      <div class="auth-visual-side">
+        <div class="auth-visual-header">
+          <div class="auth-vip-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            VELORA CLUB ACCESS
+          </div>
+          <h2 class="auth-visual-title">
+            Elevate Your Everyday <span class="highlight">Shopping</span> Experience.
+          </h2>
+          <p class="auth-visual-subtitle">
+            Sign in to unlock personalized recommendations, live Pakistan order tracking, and member-only pricing.
+          </p>
+        </div>
+
+        <!-- Benefits List -->
+        <div class="auth-perks-list">
+          <div class="auth-perk-item">
+            <div class="auth-perk-icon">🏷️</div>
+            <div class="auth-perk-text">
+              <h4>10% Welcome Discount</h4>
+              <p>Apply code <strong>VELORA10</strong> automatically at checkout on your first order.</p>
+            </div>
+          </div>
+
+          <div class="auth-perk-item">
+            <div class="auth-perk-icon">⚡</div>
+            <div class="auth-perk-text">
+              <h4>1-Click Fast COD Checkout</h4>
+              <p>Saved delivery addresses across Karachi, Lahore, Islamabad & 200+ cities.</p>
+            </div>
+          </div>
+
+          <div class="auth-perk-item">
+            <div class="auth-perk-icon">📦</div>
+            <div class="auth-perk-text">
+              <h4>Live WhatsApp Delivery Alerts</h4>
+              <p>Real-time updates straight to your phone from dispatch to doorstep delivery.</p>
+            </div>
+          </div>
+
+          <div class="auth-perk-item">
+            <div class="auth-perk-icon">⭐</div>
+            <div class="auth-perk-text">
+              <h4>Early Access to Weekend Drops</h4>
+              <p>Shop limited-edition inventory 2 hours before the public release.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pakistani Social Proof -->
+        <div class="auth-social-proof">
+          <div class="auth-rating-row">
+            <div class="auth-stars">★★★★★</div>
+            <span class="auth-rating-label">4.9/5 from 45,000+ Pakistani Shoppers</span>
+          </div>
+          <div class="auth-testimonial-card">
+            <p>"Tracking my orders and COD checkout is super smooth. VELORA is my go-to store for quality lifestyle gear!"</p>
+            <div class="auth-testimonial-author">
+              <strong>Bilal Khan — Lahore</strong>
+              <span class="auth-verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Verified Buyer
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Interactive Authentication Form -->
+      <div class="auth-form-side">
+
+        <!-- Segmented Tab Switcher -->
+        <div class="auth-tab-switcher" role="tablist">
+          <button class="auth-tab-btn active" id="tabSignInBtn" role="tab" aria-selected="true" aria-controls="signInPanel">
+            Sign In
+          </button>
+          <button class="auth-tab-btn" id="tabSignUpBtn" role="tab" aria-selected="false" aria-controls="signUpPanel">
+            Create Account
+          </button>
+        </div>
+
+        <!-- Panel 1: Sign In View -->
+        <div class="auth-form-panel active" id="signInPanel" role="tabpanel">
+          <div class="auth-panel-heading">
+            <h1 class="auth-panel-title">Welcome Back</h1>
+            <p class="auth-panel-subtitle">Enter your details to access your VELORA account</p>
+          </div>
+
+          <form class="auth-form" id="signInForm" novalidate>
+            <!-- Email / Phone Input -->
+            <div class="form-group">
+              <label for="signInIdentifier">
+                <span>Email or Mobile Number</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="signInIdentifier"
+                  class="form-input"
+                  placeholder="e.g. name@example.com or 03001234567"
+                  autocomplete="username"
+                  required
+                >
+              </div>
+              <div class="input-feedback" id="signInIdentifierFeedback"></div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+              <label for="signInPassword">
+                <span>Password</span>
+                <button type="button" class="forgot-password-link" id="openForgotModalBtn">Forgot Password?</button>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <input
+                  type="password"
+                  id="signInPassword"
+                  class="form-input"
+                  placeholder="Enter your account password"
+                  autocomplete="current-password"
+                  required
+                >
+                <button type="button" class="password-toggle-btn" id="toggleSignInPassword" aria-label="Show or hide password">
+                  <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-closed" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="input-feedback" id="signInPasswordFeedback"></div>
+            </div>
+
+            <!-- Utilities: Remember Me -->
+            <div class="form-utilities">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="rememberMeCheckbox" checked>
+                <span>Remember me for 30 days</span>
+              </label>
+            </div>
+
+            <!-- Sign In Submit Button -->
+            <button type="submit" class="auth-submit-btn" id="signInSubmitBtn">
+              <span class="btn-spinner"></span>
+              <span class="btn-text">Sign In to VELORA</span>
+            </button>
+          </form>
+
+          <!-- Divider -->
+          <div class="auth-divider">
+            <span>Or quick sign in with</span>
+          </div>
+
+          <!-- Social Quick Login Grid -->
+          <div class="auth-social-grid">
+            <button type="button" class="social-btn google-btn" id="googleLoginBtn" title="Sign In with Google">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.25 21.36 7.31 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.17 0 9.98 0 12s.46 3.83 1.26 5.42l4.02-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.64 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              <span>Google</span>
+            </button>
+
+            <button type="button" class="social-btn whatsapp-btn" id="whatsappLoginBtn" title="Sign In via WhatsApp OTP">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.177.181-.076.355.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.073.043.419-.101.824z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </button>
+
+            <button type="button" class="social-btn apple-btn" id="appleLoginBtn" title="Sign In with Apple">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.87c.62-.75 1.04-1.8 0.92-2.87-.9.04-1.99.6-2.63 1.35-.58.67-.99 1.74-.86 2.78.99.08 2-.54 2.57-1.26z"/>
+              </svg>
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <p class="auth-terms-note">
+            Shopping as a guest? <a href="index.html">Continue to Store &rarr;</a>
+          </p>
+        </div>
+
+        <!-- Panel 2: Create Account (Sign Up) View -->
+        <div class="auth-form-panel" id="signUpPanel" role="tabpanel">
+          <div class="auth-panel-heading">
+            <h1 class="auth-panel-title">Join VELORA Club</h1>
+            <p class="auth-panel-subtitle">Create your free account & get 10% off your first purchase</p>
+          </div>
+
+          <form class="auth-form" id="signUpForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="signUpFullName">Full Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="signUpFullName"
+                  class="form-input"
+                  placeholder="e.g. Syed Ali"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+              <div class="input-feedback" id="signUpFullNameFeedback"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="signUpEmail">Email Address</label>
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <input
+                  type="email"
+                  id="signUpEmail"
+                  class="form-input"
+                  placeholder="e.g. syed@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+              <div class="input-feedback" id="signUpEmailFeedback"></div>
+            </div>
+
+            <!-- Pakistani Mobile Phone -->
+            <div class="form-group">
+              <label for="signUpPhone">Mobile Phone (Pakistan)</label>
+              <div class="phone-input-group">
+                <span class="country-code-pill">🇵🇰 +92</span>
+                <input
+                  type="tel"
+                  id="signUpPhone"
+                  class="form-input"
+                  placeholder="300 1234567"
+                  maxlength="11"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+              <div class="input-feedback" id="signUpPhoneFeedback">Used for WhatsApp order tracking & delivery notifications</div>
+            </div>
+
+            <!-- Password Input + Strength Meter -->
+            <div class="form-group">
+              <label for="signUpPassword">Create Password</label>
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <input
+                  type="password"
+                  id="signUpPassword"
+                  class="form-input"
+                  placeholder="At least 8 characters"
+                  autocomplete="new-password"
+                  required
+                >
+                <button type="button" class="password-toggle-btn" id="toggleSignUpPassword" aria-label="Show or hide password">
+                  <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-closed" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Real-time Strength Meter -->
+              <div class="password-strength-container" id="strengthContainer">
+                <div class="strength-bars">
+                  <div class="strength-bar" id="bar1"></div>
+                  <div class="strength-bar" id="bar2"></div>
+                  <div class="strength-bar" id="bar3"></div>
+                </div>
+                <div class="strength-label">
+                  <span id="strengthText">Password Strength</span>
+                  <span id="strengthHint">Min 8 chars, 1 number</span>
+                </div>
+              </div>
+              <div class="input-feedback" id="signUpPasswordFeedback"></div>
+            </div>
+
+            <!-- Opt-ins & Terms -->
+            <div class="form-utilities" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="marketingOptIn" checked>
+                <span>Send me VIP discount codes & weekend drop alerts on WhatsApp</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" id="termsOptIn" required>
+                <span>I agree to VELORA <a href="#" style="text-decoration:underline;">Terms</a> and <a href="#" style="text-decoration:underline;">Privacy Policy</a></span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="auth-submit-btn" id="signUpSubmitBtn">
+              <span class="btn-spinner"></span>
+              <span class="btn-text">Create Account & Unlock 10% Off</span>
+            </button>
+          </form>
+
+          <p class="auth-terms-note">
+            Already have an account? <a href="#" id="switchToSignInLink">Sign In here &rarr;</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 3. Password Reset & OTP Modal -->
+  <div class="auth-modal-backdrop" id="forgotModalBackdrop">
+    <div class="auth-modal-card" role="dialog" aria-modal="true" aria-labelledby="forgotModalTitle">
+      <button class="auth-modal-close-btn" id="closeForgotModalBtn" aria-label="Close modal">&times;</button>
+
+      <!-- Step 1: Request Reset -->
+      <div id="resetStep1">
+        <div class="auth-modal-icon-badge">🔑</div>
+        <h3 id="forgotModalTitle" style="font-family:var(--font-heading); font-size:1.35rem; font-weight:800; margin-bottom:8px;">
+          Reset Your Password
+        </h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin-bottom:20px;">
+          Enter your registered email or Pakistan mobile number and we'll send a 6-digit verification code.
+        </p>
+
+        <form id="forgotForm" novalidate>
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label for="resetIdentifier">Email or Phone Number</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="resetIdentifier"
+                class="form-input"
+                placeholder="e.g. user@gmail.com or 03001234567"
+                required
+              >
+            </div>
+            <div class="input-feedback" id="resetIdentifierFeedback"></div>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="sendOtpBtn">
+            <span class="btn-spinner"></span>
+            <span class="btn-text">Send Verification Code</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Enter OTP Code -->
+      <div id="resetStep2" style="display:none;">
+        <div class="auth-modal-icon-badge">📱</div>
+        <h3 style="font-family:var(--font-heading); font-size:1.35rem; font-weight:800; margin-bottom:8px;">
+          Enter Verification Code
+        </h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
+          We sent a 6-digit OTP to <strong id="resetTargetDisplay" style="color:var(--obsidian);"></strong>.
+        </p>
+
+        <form id="otpForm">
+          <div class="otp-box-container">
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autofocus>
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric">
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.8rem; color:var(--text-muted);">
+            <span>Didn't receive code?</span>
+            <button type="button" id="resendOtpBtn" style="font-weight:700; color:var(--obsidian); text-decoration:underline;">Resend Code (30s)</button>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="verifyOtpBtn">
+            <span class="btn-spinner"></span>
+            <span class="btn-text">Verify & Continue</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 3: Success Confirmation -->
+      <div id="resetStep3" style="display:none; text-align:center; padding:10px 0;">
+        <div class="auth-modal-icon-badge" style="margin:0 auto 16px; background:rgba(16,185,129,0.15); color:var(--badge-green);">✓</div>
+        <h3 style="font-family:var(--font-heading); font-size:1.35rem; font-weight:800; margin-bottom:8px;">
+          Password Reset Complete!
+        </h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin-bottom:24px;">
+          Your temporary sign-in link has been verified. You can now sign in with your new credentials.
+        </p>
+        <button type="button" class="auth-submit-btn" id="finishResetBtn">
+          Back to Sign In
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. Footer -->
+  <footer class="auth-footer">
+    <p>&copy; 2026 VELORA Pakistan. All rights reserved. Secured with 256-bit SSL encryption. <a href="index.html">Back to Home</a></p>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Auth Script -->
+  <script src="login.js"></script>
+</body>
+</html>
