@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELORA — Find What Moves You | Modern Lifestyle & Essentials</title>
+  <meta name="description"
+    content="Discover trending fashion, smart gadgets, beauty essentials, and everyday products selected for modern living. Free delivery in Pakistan on orders over Rs. 3,000.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-content">
+      <span class="announcement-tag">LIMITED OFFER</span>
+      <p class="announcement-text">FREE DELIVERY ACROSS PAKISTAN ON ORDERS OVER <strong>Rs. 3,000</strong></p>
+      <a href="#deals" class="announcement-link">Shop Deals &rarr;</a>
+    </div>
+  </div>
+
+  <!-- 2. Header & Sticky Navbar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- Mobile Menu Trigger -->
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Clean Bold Wordmark Logo -->
+      <a href="#" class="brand-logo">VELORA</a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#new-arrivals" class="nav-item">New Arrivals</a></li>
+          <li><a href="#categories" class="nav-item" data-category="men">Men</a></li>
+          <li><a href="#categories" class="nav-item" data-category="women">Women</a></li>
+          <li><a href="#categories" class="nav-item" data-category="electronics">Electronics</a></li>
+          <li><a href="#categories" class="nav-item" data-category="beauty">Beauty</a></li>
+          <li><a href="#categories" class="nav-item" data-category="home">Home</a></li>
+          <li><a href="#deals" class="nav-item nav-deals"><span class="badge-dot"></span>Deals</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Icons (Search, Account, Wishlist, Cart) -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn" id="searchTriggerBtn" aria-label="Search Products" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="action-label">Search</span>
+        </button>
+
+        <!-- Account Trigger -->
+        <button class="action-btn" id="accountTriggerBtn" aria-label="User Account" title="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="action-label">Account</span>
+        </button>
+
+        <!-- Wishlist Trigger -->
+        <button class="action-btn" id="wishlistTriggerBtn" aria-label="Wishlist" title="Wishlist">
+          <div class="icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+            <span class="action-counter" id="wishlistCount">0</span>
+          </div>
+          <span class="action-label">Wishlist</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="action-btn cart-action-btn" id="cartTriggerBtn" aria-label="Shopping Cart" title="Cart">
+          <div class="icon-wrapper">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="action-counter cart-counter" id="cartCount">2</span>
+          </div>
+          <span class="cart-total-pill" id="headerCartTotal">Rs. 8,498</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="brand-logo">VELORA</span>
+        <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="#new-arrivals" class="mobile-nav-item">New Arrivals <span class="badge-lime">NEW</span></a></li>
+          <li><a href="#trending" class="mobile-nav-item">Trending Now</a></li>
+          <li><a href="#categories" class="mobile-nav-item">Shop by Category</a></li>
+          <li><a href="#weekend-drop" class="mobile-nav-item">The Weekend Drop</a></li>
+          <li><a href="#deals" class="mobile-nav-item">Flash Deals <span class="badge-discount">-50%</span></a></li>
+          <li><a href="#why-velora" class="mobile-nav-item">Why VELORA</a></li>
+          <li><a href="#brand-story" class="mobile-nav-item">Brand Story</a></li>
+          <li><a href="#reviews" class="mobile-nav-item">Customer Reviews</a></li>
+          <li style="margin-top: 8px; border-top: 1px solid var(--border-light); padding-top: 8px;">
+            <a href="login.html" class="mobile-nav-item" id="mobileAccountLink"
+              style="font-weight: 700; color: var(--obsidian); display: flex; align-items: center; justify-content: space-between;">
+              <span id="mobileAccountText">👤 Account / Sign In</span>
+              <span class="badge-lime" style="font-size: 0.7rem;">10% OFF</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <div class="support-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>WhatsApp Support: +92 300 1234567</span>
+          </div>
+          <p class="drawer-note">Fast Delivery Across Pakistan • Cash on Delivery Available</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 3. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-text-col">
+          <div class="floating-tag">
+            <span class="tag-pulse"></span>
+            <span>NEW SEASON 2026</span>
+          </div>
+          <h1 class="hero-headline">
+            EVERYTHING YOU WANT.<br>
+            <span class="headline-highlight">ONE PLACE.</span>
+          </h1>
+          <p class="hero-subheading">
+            Discover trending fashion, smart gadgets, beauty essentials, and everyday products selected for modern
+            living.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#trending" class="btn btn-lime">
+              <span>SHOP NOW</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#deals" class="btn btn-outline-white">
+              <span>EXPLORE DEALS</span>
+            </a>
+          </div>
+          <!-- Hero micro stats -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <span class="trust-bold">24-48h</span>
+              <span class="trust-label">Express Delivery</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-bold">100%</span>
+              <span class="trust-label">Original Products</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-bold">COD</span>
+              <span class="trust-label">Pay at Doorstep</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-visual-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+              alt="VELORA Modern Lifestyle Collection" class="hero-main-img" loading="eager">
+            <!-- Floating Product Spotlights -->
+            <div class="floating-product-card card-top-right">
+              <div class="product-mini-thumb">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=300&auto=format&fit=crop"
+                  alt="Smart Watch">
+              </div>
+              <div class="product-mini-info">
+                <span class="mini-tag">Trending</span>
+                <p class="mini-title">Smart Watch Pro</p>
+                <span class="mini-price">Rs. 5,999</span>
+              </div>
+            </div>
+
+            <div class="floating-product-card card-bottom-left">
+              <div class="rating-stars-mini">★★★★★ 4.9</div>
+              <p class="mini-review-quote">"Best lifestyle store experience in Pakistan."</p>
+              <span class="mini-buyer-tag">✓ Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Categories (6 Large Cards) -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">CURATED SELECTIONS</div>
+          <h2 class="section-title">SHOP BY CATEGORY</h2>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Card 1: Fashion -->
+          <a href="#trending" class="category-card" data-filter="fashion" data-tilt data-tilt-max="6"
+            data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop"
+                alt="Fashion collection" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count">140+ Items</span>
+              <h3 class="category-title">Fashion</h3>
+              <p class="category-desc">Style for every day.</p>
+              <span class="category-cta">Explore Fashion &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Card 2: Electronics -->
+          <a href="#trending" class="category-card" data-filter="electronics" data-tilt data-tilt-max="6"
+            data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop"
+                alt="Electronics & Audio" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count">85+ Items</span>
+              <h3 class="category-title">Electronics</h3>
+              <p class="category-desc">Tech that fits your life.</p>
+              <span class="category-cta">Explore Tech &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Card 3: Beauty -->
+          <a href="#trending" class="category-card" data-filter="beauty" data-tilt data-tilt-max="6"
+            data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop"
+                alt="Beauty Essentials" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count">60+ Items</span>
+              <h3 class="category-title">Beauty</h3>
+              <p class="category-desc">Your everyday essentials.</p>
+              <span class="category-cta">Explore Beauty &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Card 4: Home & Living -->
+          <a href="#trending" class="category-card" data-filter="home" data-tilt data-tilt-max="6" data-tilt-speed="400"
+            data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800&auto=format&fit=crop"
+                alt="Home and Living" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count">95+ Items</span>
+              <h3 class="category-title">Home & Living</h3>
+              <p class="category-desc">Make your space yours.</p>
+              <span class="category-cta">Explore Home &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Card 5: Accessories -->
+          <a href="#trending" class="category-card" data-filter="accessories" data-tilt data-tilt-max="6"
+            data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=800&auto=format&fit=crop"
+                alt="Accessories" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count">110+ Items</span>
+              <h3 class="category-title">Accessories</h3>
+              <p class="category-desc">Complete your look.</p>
+              <span class="category-cta">Explore Accessories &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Card 6: Trending -->
+          <a href="#trending" class="category-card category-card-highlight" data-filter="trending" data-tilt
+            data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="category-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop"
+                alt="Trending items" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <span class="category-count badge-lime-pill">🔥 Top Picks</span>
+              <h3 class="category-title">Trending</h3>
+              <p class="category-desc">What's popular right now.</p>
+              <span class="category-cta">See What's Hot &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Trending Products -->
+    <section class="section section-products" id="trending">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-subtitle">POPULAR THIS WEEK</div>
+            <h2 class="section-title">TRENDING NOW</h2>
+            <p class="section-lead">The products everyone's talking about.</p>
+          </div>
+          <!-- Filter Tabs -->
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="fashion">Fashion</button>
+            <button class="filter-tab" data-filter="electronics">Electronics</button>
+            <button class="filter-tab" data-filter="beauty">Beauty</button>
+            <button class="filter-tab" data-filter="home">Home</button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="products-grid" id="trendingProductsGrid">
+          <!-- Rendered dynamically by script.js with rich product cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Big Promotional Section (The Weekend Drop) -->
+    <section class="weekend-drop-section" id="weekend-drop">
+      <div class="weekend-drop-bg">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop"
+          alt="Weekend Drop Sale" loading="lazy">
+        <div class="weekend-overlay"></div>
+      </div>
+      <div class="container weekend-drop-container">
+        <div class="weekend-drop-card">
+          <div class="drop-badge">LIMITED TIME SALE</div>
+          <h2 class="drop-title">THE WEEKEND DROP</h2>
+          <div class="drop-discount">UP TO 50% OFF</div>
+          <p class="drop-desc">
+            Limited-time prices on selected products across premium tech, street fashion, and luxury home additions.
+            Once it's gone, it's gone.
+          </p>
+          <div class="drop-countdown" id="dropCountdown">
+            <div class="countdown-unit">
+              <span class="unit-num" id="cdDays">02</span>
+              <span class="unit-label">Days</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="unit-num" id="cdHours">14</span>
+              <span class="unit-label">Hours</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="unit-num" id="cdMins">38</span>
+              <span class="unit-label">Mins</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="unit-num" id="cdSecs">45</span>
+              <span class="unit-label">Secs</span>
+            </div>
+          </div>
+          <div class="drop-actions">
+            <a href="#deals" class="btn btn-lime btn-lg">
+              <span>SHOP THE SALE</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. New Arrivals (4-8 Products) -->
+    <section class="section new-arrivals-section" id="new-arrivals">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-subtitle">JUST LANDED</div>
+            <h2 class="section-title">NEW ARRIVALS</h2>
+            <p class="section-lead">Fresh products. Fresh picks. Updated every week.</p>
+          </div>
+          <a href="#trending" class="link-arrow">
+            VIEW ALL NEW ARRIVALS &rarr;
+          </a>
+        </div>
+
+        <div class="products-grid" id="newArrivalsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Why VELORA? (Simple & Trustworthy) -->
+    <section class="section why-velora-section" id="why-velora">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">THE VELORA PROMISE</div>
+          <h2 class="section-title">WHY SHOP VELORA?</h2>
+          <p class="section-lead max-w-md mx-auto">
+            We simplify shopping with honest pricing, authentic products, and customer-first support.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <!-- 1. Fast Delivery -->
+          <div class="why-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.06">
+            <div class="why-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="why-title">Fast Delivery</h3>
+            <p class="why-desc">Get your order delivered swiftly right to your doorstep anywhere in Pakistan.</p>
+          </div>
+
+          <!-- 2. Secure Checkout -->
+          <div class="why-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.06">
+            <div class="why-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Secure Checkout</h3>
+            <p class="why-desc">Your payment details and customer data stay 100% encrypted & protected.</p>
+          </div>
+
+          <!-- 3. Easy Returns -->
+          <div class="why-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.06">
+            <div class="why-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Easy Returns</h3>
+            <p class="why-desc">Straightforward 7-day hassle-free returns and refunds on eligible products.</p>
+          </div>
+
+          <!-- 4. Customer Support -->
+          <div class="why-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.06">
+            <div class="why-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Customer Support</h3>
+            <p class="why-desc">We're available via WhatsApp & Email whenever you need assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Brand Story -->
+    <section class="section brand-story-section" id="brand-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content">
+            <div class="section-subtitle">OUR MANIFESTO</div>
+            <h2 class="story-headline">
+              SHOP SMARTER.<br>
+              LIVE BETTER.
+            </h2>
+            <p class="story-body">
+              VELORA brings together products designed to make everyday life better — from fashion and technology to
+              beauty and home essentials. We focus on products worth buying, straightforward pricing, and a shopping
+              experience that stays simple.
+            </p>
+            <p class="story-highlight">
+              “Good products. Fair prices. No unnecessary complications.”
+            </p>
+            <div class="story-actions">
+              <a href="#about-modal" class="btn btn-dark" id="aboutVeloraBtn">
+                <span>ABOUT VELORA &rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="story-media">
+            <div class="story-img-card">
+              <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=800&auto=format&fit=crop"
+                alt="VELORA Design Philosophy" loading="lazy">
+              <div class="story-badge">
+                <span class="story-badge-year">EST. 2026</span>
+                <span class="story-badge-text">Designed For Modern Living</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Customer Favorites / Best Sellers -->
+    <section class="section best-sellers-section" id="best-sellers">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-subtitle">
+              <span class="badge-tag">MOST LOVED</span>
+            </div>
+            <h2 class="section-title">CUSTOMER FAVORITES</h2>
+            <p class="section-lead">Top-rated items based on verified customer feedback.</p>
+          </div>
+        </div>
+
+        <div class="products-grid" id="bestSellersGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Deals Section (Dark/High-Contrast) -->
+    <section class="section deals-section-dark" id="deals">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="deals-badge">DON'T MISS OUT</div>
+          <h2 class="deals-main-title">DEALS YOU DON'T WANT TO MISS</h2>
+          <p class="deals-lead">Unbeatable discounts updated daily. Grab yours before stock runs out.</p>
+        </div>
+
+        <div class="deals-cards-grid">
+          <!-- Card 1: Flash Deals -->
+          <div class="deal-card deal-card-lime" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.08">
+            <div class="deal-card-icon">⚡</div>
+            <span class="deal-tag">HOT DEAL</span>
+            <h3 class="deal-title">FLASH DEALS</h3>
+            <p class="deal-desc">Limited-time offers on fast-selling tech and style pieces.</p>
+            <div class="deal-price-point">From Rs. 1,499</div>
+            <button class="btn btn-deal-action" data-deal="flash">Shop Flash Deals &rarr;</button>
+          </div>
+
+          <!-- Card 2: Under Rs. 999 -->
+          <div class="deal-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.08">
+            <div class="deal-card-icon">🏷️</div>
+            <span class="deal-tag">BUDGET PICKS</span>
+            <h3 class="deal-title">UNDER Rs. 999</h3>
+            <p class="deal-desc">Budget-friendly finds without compromising on quality.</p>
+            <div class="deal-price-point">Under Rs. 999</div>
+            <button class="btn btn-deal-action" data-deal="under999">Browse Budget &rarr;</button>
+          </div>
+
+          <!-- Card 3: Up to 50% Off -->
+          <div class="deal-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.08">
+            <div class="deal-card-icon">💥</div>
+            <span class="deal-tag">MEGA SALE</span>
+            <h3 class="deal-title">UP TO 50% OFF</h3>
+            <p class="deal-desc">Selected premium products at half their original price.</p>
+            <div class="deal-price-point">Save 50%</div>
+            <button class="btn btn-deal-action" data-deal="fifty">View 50% Off &rarr;</button>
+          </div>
+
+          <!-- Card 4: Bundle & Save -->
+          <div class="deal-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.08">
+            <div class="deal-card-icon">📦</div>
+            <span class="deal-tag">EXTRA VALUE</span>
+            <h3 class="deal-title">BUNDLE & SAVE</h3>
+            <p class="deal-desc">Better value together with curated product bundles.</p>
+            <div class="deal-price-point">Save Rs. 2,000+</div>
+            <button class="btn btn-deal-action" data-deal="bundle">Explore Bundles &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Customer Reviews (Authentic & Trustworthy) -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">AUTHENTIC EXPERIENCES</div>
+          <h2 class="section-title">WHAT CUSTOMERS SAY</h2>
+          <p class="section-lead max-w-md mx-auto">Real reviews from people who shop with VELORA every day.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “The Wireless Smart Watch Pro arrived within 24 hours in Lahore. Exactly as shown in photos, excellent
+              build quality and battery lasts 4+ days. Very pleased!”
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">AM</div>
+              <div class="reviewer-details">
+                <span class="reviewer-name">Ahmed Malik</span>
+                <span class="reviewer-location">Lahore • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “Customer support on WhatsApp answered my sizing question in 2 minutes. The oversized hoodie fabric is
+              thick, soft, and feels ultra premium. Highly recommended!”
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">ZK</div>
+              <div class="reviewer-details">
+                <span class="reviewer-name">Zainab Khan</span>
+                <span class="reviewer-location">Karachi • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              “Payment on delivery made it super easy. The ceramic desk lamp transformed my workspace. Will definitely
+              be ordering again from VELORA.”
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">US</div>
+              <div class="reviewer-details">
+                <span class="reviewer-name">Usman Siddiqui</span>
+                <span class="reviewer-location">Islamabad • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Promise Strip -->
+        <div class="promise-strip">
+          <div class="promise-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>100% Genuine Guaranteed</span>
+          </div>
+          <div class="promise-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <span>7-Day Easy Replacement</span>
+          </div>
+          <div class="promise-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            <span>Cash on Delivery Anywhere</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Instagram / Social Section (6-image Grid) -->
+    <section class="section social-section" id="social">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">COMMUNITY</div>
+          <h2 class="section-title">FOLLOW THE VELORA WORLD</h2>
+          <p class="section-lead max-w-md mx-auto">
+            Discover products, styling ideas, deals, and behind-the-scenes new arrivals. Tag @VeloraOfficial to be
+            featured.
+          </p>
+        </div>
+
+        <div class="insta-grid">
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 1" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 2" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 3" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 4" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 5" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=600&auto=format&fit=crop"
+              alt="Instagram 6" loading="lazy">
+            <div class="insta-hover-overlay">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-action-wrap text-center">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>FOLLOW US @VELORAOFFICIAL</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Newsletter Section -->
+    <section class="section newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <span class="newsletter-badge">JOIN THE CLUB</span>
+            <h2 class="newsletter-title">GET 10% OFF YOUR FIRST ORDER</h2>
+            <p class="newsletter-sub">Sign up for new arrivals, exclusive offers and special drops.</p>
+
+            <form class="newsletter-form" id="newsletterForm">
+              <div class="input-group">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required
+                  aria-label="Email address">
+                <button type="submit" class="btn btn-lime">GET MY DISCOUNT</button>
+              </div>
+              <div class="form-feedback" id="newsletterFeedback"></div>
+            </form>
+            <p class="newsletter-disclaimer">No spam. Unsubscribe at any time with one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 15. Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div class="footer-col footer-brand-col">
+          <a href="#" class="brand-logo footer-logo">VELORA</a>
+          <p class="footer-tagline">“Find What Moves You.”</p>
+          <p class="footer-bio">
+            Modern lifestyle essentials, curated tech, fashion and home decor. Designed for convenience, fair pricing,
+            and trustworthy delivery.
+          </p>
+          <div class="footer-contact-pill">
+            <span>💬 Need help? WhatsApp: </span>
+            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer">+92 300 1234567</a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">SHOP</h4>
+          <ul class="footer-links">
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#best-sellers">Best Sellers</a></li>
+            <li><a href="#categories">Fashion</a></li>
+            <li><a href="#categories">Electronics</a></li>
+            <li><a href="#categories">Beauty</a></li>
+            <li><a href="#categories">Home & Living</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+
+        <!-- Help Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">HELP</h4>
+          <ul class="footer-links">
+            <li><a href="#contact-modal" class="modal-link" data-modal="contact">Contact Us</a></li>
+            <li><a href="#shipping-modal" class="modal-link" data-modal="shipping">Shipping Information</a></li>
+            <li><a href="#track-modal" class="modal-link" data-modal="track">Track Order</a></li>
+            <li><a href="#returns-modal" class="modal-link" data-modal="returns">Returns & Refunds</a></li>
+            <li><a href="#faq-modal" class="modal-link" data-modal="faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">COMPANY</h4>
+          <ul class="footer-links">
+            <li><a href="#about-modal" class="modal-link" data-modal="about">About Us</a></li>
+            <li><a href="#brand-story">Our Story</a></li>
+            <li><a href="#careers-modal" class="modal-link" data-modal="careers">Careers</a></li>
+            <li><a href="#privacy-modal" class="modal-link" data-modal="privacy">Privacy Policy</a></li>
+            <li><a href="#terms-modal" class="modal-link" data-modal="terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">CONNECT</h4>
+          <ul class="footer-links social-list">
+            <li>
+              <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                <span class="social-icon">💬</span> WhatsApp Support
+              </a>
+            </li>
+            <li>
+              <a href="mailto:support@velora.pk" class="social-item-link">
+                <span class="social-icon">✉️</span> Email Support
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                <span class="social-icon">📸</span> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                <span class="social-icon">📘</span> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                <span class="social-icon">🎵</span> TikTok
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright-text">&copy; 2026 VELORA. All rights reserved.</p>
+        <div class="payment-methods-icons">
+          <span class="pay-badge">Cash on Delivery</span>
+          <span class="pay-badge">Bank Transfer</span>
+          <span class="pay-badge">JazzCash / EasyPaisa</span>
+          <span class="pay-badge">Debit/Credit Cards</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       MODALS & SLIDE-OVER PANELS
+       ======================================================== -->
+
+  <!-- 1. Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop">
+    <div class="cart-drawer-panel" id="cartDrawerPanel">
+      <div class="cart-header">
+        <div class="cart-title-wrap">
+          <h3 class="cart-title">YOUR CART</h3>
+          <span class="cart-items-count" id="cartItemsCountLabel">(2 items)</span>
+        </div>
+        <button class="icon-btn close-cart-btn" id="closeCartBtn" aria-label="Close cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress Bar -->
+      <div class="shipping-bar-wrap">
+        <div class="shipping-bar-msg" id="shippingBarMsg">
+          🎉 <strong>You unlocked FREE delivery!</strong>
+        </div>
+        <div class="shipping-progress">
+          <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="cart-items-container" id="cartItemsContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Cart Summary Footer -->
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span class="summary-val" id="cartSubtotal">Rs. 8,498</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery</span>
+          <span class="summary-val free-badge" id="cartDelivery">FREE</span>
+        </div>
+        <div class="cart-divider"></div>
+        <div class="cart-summary-row total-row">
+          <span>Total</span>
+          <span class="summary-val total-val" id="cartTotal">Rs. 8,498</span>
+        </div>
+        <p class="cart-tax-note">Taxes included. Standard shipping in 2-3 business days.</p>
+
+        <button class="btn btn-lime btn-block btn-checkout" id="checkoutBtn">
+          <span>PROCEED TO CHECKOUT &rarr;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Product Detail / Quick View Modal -->
+  <div class="product-modal-backdrop" id="productModalBackdrop">
+    <div class="product-modal-panel" id="productModalPanel">
+      <button class="modal-close-btn" id="closeProductModalBtn" aria-label="Close Product View">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="product-detail-layout" id="productDetailContent">
+        <!-- Injected dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Checkout Modal (Pakistan-Optimized) -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop">
+    <div class="checkout-modal-panel">
+      <div class="checkout-header">
+        <div class="checkout-logo">VELORA <span>CHECKOUT</span></div>
+        <button class="icon-btn" id="closeCheckoutBtn" aria-label="Close Checkout">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="checkout-body">
+        <form class="checkout-form" id="checkoutForm">
+          <!-- Step 1: Contact Information -->
+          <div class="checkout-step">
+            <h4 class="step-title"><span class="step-num">1</span> Contact Information</h4>
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label for="cName">Full Name *</label>
+                <input type="text" id="cName" placeholder="e.g. Bilal Ahmed" required>
+              </div>
+              <div class="form-field">
+                <label for="cPhone">WhatsApp / Mobile Phone *</label>
+                <input type="tel" id="cPhone" placeholder="0300 1234567" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cEmail">Email Address *</label>
+              <input type="email" id="cEmail" placeholder="yourname@gmail.com" required>
+            </div>
+          </div>
+
+          <!-- Step 2: Delivery Address (Pakistan Optimized) -->
+          <div class="checkout-step">
+            <h4 class="step-title"><span class="step-num">2</span> Delivery Address</h4>
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label for="cProvince">Province *</label>
+                <select id="cProvince" required>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Sindh">Sindh</option>
+                  <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                  <option value="Balochistan">Balochistan</option>
+                  <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                  <option value="Azad Kashmir">Azad Kashmir</option>
+                  <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="cCity">City *</label>
+                <input type="text" id="cCity" placeholder="e.g. Lahore / Karachi / Islamabad" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cArea">Area / Sector / Colony *</label>
+              <input type="text" id="cArea" placeholder="e.g. DHA Phase 5 / Gulberg / F-10" required>
+            </div>
+            <div class="form-field">
+              <label for="cAddress">Complete Street Address *</label>
+              <input type="text" id="cAddress" placeholder="House / Flat / Street / Landmark" required>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment Method -->
+          <div class="checkout-step">
+            <h4 class="step-title"><span class="step-num">3</span> Payment Method</h4>
+            <div class="payment-options">
+              <label class="pay-option selected">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                <div class="pay-option-content">
+                  <span class="pay-option-title">🚚 Cash on Delivery (COD)</span>
+                  <span class="pay-option-sub">Pay in cash when the courier reaches your doorstep</span>
+                </div>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="bank">
+                <div class="pay-option-content">
+                  <span class="pay-option-title">🏦 Direct Bank Transfer</span>
+                  <span class="pay-option-sub">Meezan, HBL, Bank Alfalah, Nayapay, Sadapay</span>
+                </div>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="wallet">
+                <div class="pay-option-content">
+                  <span class="pay-option-title">📱 JazzCash / EasyPaisa</span>
+                  <span class="pay-option-sub">Fast mobile wallet payment</span>
+                </div>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="card">
+                <div class="pay-option-content">
+                  <span class="pay-option-title">💳 Debit / Credit Card</span>
+                  <span class="pay-option-sub">Visa & Mastercard accepted</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Order Summary in Checkout -->
+          <div class="checkout-order-summary">
+            <div class="checkout-summary-line">
+              <span>Order Amount</span>
+              <strong id="checkoutTotalVal">Rs. 8,498</strong>
+            </div>
+            <div class="checkout-summary-line">
+              <span>Delivery Charges</span>
+              <span class="badge-free">FREE</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-lime btn-block btn-lg" id="placeOrderSubmitBtn">
+            PLACE ORDER &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Order Confirmation Modal -->
+  <div class="order-success-backdrop" id="orderSuccessBackdrop">
+    <div class="order-success-card">
+      <div class="success-icon">✓</div>
+      <h3 class="success-title">ORDER PLACED SUCCESSFULLY!</h3>
+      <p class="success-order-id">Order ID: <strong id="confirmedOrderId">#VEL-84920</strong></p>
+      <p class="success-desc">
+        Thank you for choosing VELORA! We are preparing your shipment. You will receive a tracking SMS & WhatsApp
+        confirmation shortly.
+      </p>
+
+      <div class="order-whatsapp-box">
+        <span>Need instant tracking update?</span>
+        <a href="https://wa.me/923001234567" id="orderWhatsappLink" target="_blank" rel="noopener noreferrer"
+          class="btn btn-whatsapp">
+          Track on WhatsApp 💬
+        </a>
+      </div>
+
+      <button class="btn btn-dark btn-block" id="continueShoppingBtn">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- 5. Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop">
+    <div class="search-modal-panel">
+      <div class="search-input-header">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="liveSearchInput" placeholder="Search products, categories, styles..." autofocus>
+        <button class="icon-btn" id="closeSearchModalBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results-container" id="searchResultsContainer">
+        <!-- Live search results appear here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Member Account Profile Modal (When Logged In) -->
+  <div class="auth-modal-backdrop" id="accountModalBackdrop">
+    <div class="auth-modal-card" style="max-width: 480px;">
+      <button class="auth-modal-close-btn" id="closeAccountModalBtn" aria-label="Close Account">&times;</button>
+
+      <div
+        style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light);">
+        <div
+          style="width: 56px; height: 56px; border-radius: 50%; background: var(--obsidian); color: var(--accent-lime); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;"
+          id="userAvatarInitial">
+          U
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 2px;"
+            id="profileUserName">Syed Ali</h3>
+          <p style="font-size: 0.825rem; color: var(--text-muted);" id="profileUserEmail">syed@example.com</p>
+          <span class="badge-lime"
+            style="font-size: 0.7rem; font-weight: 700; margin-top: 4px; display: inline-block;">VELORA VIP
+            MEMBER</span>
+        </div>
+      </div>
+
+      <!-- Member Perks Summary -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px;">
+        <div
+          style="background: var(--light-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <span style="font-size: 0.725rem; color: var(--text-muted); display: block; font-weight: 600;">ACTIVE
+            VOUCHER</span>
+          <strong style="font-size: 0.95rem; color: var(--obsidian); font-family: var(--font-heading);">VELORA10 (10%
+            OFF)</strong>
+        </div>
+        <div
+          style="background: var(--light-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <span style="font-size: 0.725rem; color: var(--text-muted); display: block; font-weight: 600;">DELIVERY
+            STATUS</span>
+          <strong style="font-size: 0.95rem; color: var(--badge-green); font-family: var(--font-heading);">FREE OVER Rs.
+            3K</strong>
+        </div>
+      </div>
+
+      <!-- Quick Action Links -->
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+        <a href="https://wa.me/923001234567?text=Hi%20VELORA%2C%20I%20want%20to%20track%20my%20recent%20orders."
+          target="_blank" rel="noopener noreferrer"
+          style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--soft-gray); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600;">
+          <span>📦 Track Active Orders on WhatsApp</span>
+          <span>&rarr;</span>
+        </a>
+        <button type="button"
+          onclick="document.getElementById('accountModalBackdrop').classList.remove('open'); openCartDrawer();"
+          style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--soft-gray); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600; text-align: left; width: 100%;">
+          <span>🛒 View Saved Cart Items</span>
+          <span>&rarr;</span>
+        </button>
+      </div>
+
+      <!-- Sign Out Button -->
+      <button type="button" class="btn btn-outline-dark btn-block" id="logoutBtn"
+        style="border-color: #ef4444; color: #ef4444;">
+        Sign Out of Account
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Sticky WhatsApp Floating Button for Pakistan Support -->
+  <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn"
+    aria-label="WhatsApp Support">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.58 20.16 9.15 19.78 7.89 19.03L7.59 18.85L4.47 19.67L5.3 16.63L5.1 16.31C4.28 15.01 3.8 13.48 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67ZM8.73 7.33C8.52 7.33 8.35 7.34 8.2 7.61C8.05 7.88 7.46 8.44 7.46 9.58C7.46 10.72 8.29 11.81 8.41 11.97C8.53 12.13 10.05 14.47 12.37 15.47C14.3 16.3 14.69 16.14 15.11 16.1C15.53 16.06 16.47 15.54 16.67 14.98C16.87 14.42 16.87 13.94 16.81 13.84C16.75 13.74 16.58 13.68 16.33 13.55C16.08 13.42 14.85 12.82 14.62 12.74C14.39 12.66 14.22 12.62 14.05 12.88C13.88 13.14 13.4 13.72 13.25 13.89C13.1 14.06 12.95 14.08 12.7 13.96C12.45 13.84 11.65 13.57 10.7 12.73C9.96 12.07 9.46 11.26 9.31 11.01C9.16 10.76 9.29 10.63 9.42 10.5C9.53 10.39 9.67 10.21 9.8 10.06C9.93 9.91 9.97 9.8 10.05 9.63C10.13 9.46 10.09 9.32 10.03 9.2C9.97 9.08 9.49 7.9 9.29 7.42C9.1 6.94 8.91 7.01 8.73 7.33Z" />
+    </svg>
+    <span class="wa-tooltip">Chat with us</span>
+  </a>
+
+  <!-- VELORA AI Chatbot -->
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="chatbot.js"></script>
+
+  <!-- GSAP 3 + ScrollTrigger + Vanilla Tilt (Animation Layer) -->
+  <script src="gsap.min.js"></script>
+  <script src="ScrollTrigger.min.js"></script>
+  <script src="vanilla-tilt.min.js"></script>
+
+  <script src="script.js?v=3"></script>
+  <script src="animations.js?v=10"></script>
+</body>
+
+</html>
