@@ -20,9 +20,9 @@ const FacebookIcon = ({ size = 20, className = "" }) => (
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const whatsappLink = "https://api.whatsapp.com/send?phone=%2B971552383697&text=Hi%20NOOR%20Al%20FAJR!%20I%20need%20a%20quote%20for%20packaging%20materials.";
-  const phone = "+971 55 238 3697";
-  const email = "nooralfajrpck@gmail.com";
+  const whatsappLink = "https://api.whatsapp.com/send?phone=%2B971551937833&text=Hi%20NOOR%20Al%20FAJR!%20I%20need%20a%20quote%20for%20packaging%20materials.";
+  const phone = "+971 55 193 7833";
+  const email = "info@nooralfajr.com";
   const facebookLink = "https://www.facebook.com/profile.php?id=61577771881337";
 
   const categories = [
@@ -887,8 +887,8 @@ export default function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://maps.google.com/?q=Industrial+Area+6+Sharjah+UAE" target="_blank" rel="noopener noreferrer">
-                    <MapPin size={14} /> Industrial Area 6, Sharjah
+                  <a href="https://maps.google.com/?q=Industrial+Area+6+Block+Side+of+1+to+10+Market+Sharjah+UAE" target="_blank" rel="noopener noreferrer">
+                    <MapPin size={14} /> Industrial Area 6, Block Side of 1 to 10 Market, Sharjah
                   </a>
                 </li>
               </ul>
@@ -915,7 +915,7 @@ export default function App() {
       </motion.a>
 
       {/* AI Chat Assistant */}
-      <ChatAssistant whatsappNumber="+971552383697" />
+      <ChatAssistant whatsappNumber="+971551937833" />
     </div>
   );
 }

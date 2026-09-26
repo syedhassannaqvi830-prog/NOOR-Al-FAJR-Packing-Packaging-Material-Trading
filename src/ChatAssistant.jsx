@@ -34,7 +34,7 @@ const KNOWLEDGE_BASE = [
   },
   {
     keywords: ['location', 'where', 'address', 'visit', 'shop', 'store', 'office'],
-    response: "📍 **Our Location:**\nWe are located at **Industrial Area 6, Sharjah, United Arab Emirates**.\n• Hours: Saturday – Thursday, 8:00 AM – 8:00 PM\n• Fast dispatches to all UAE locations daily.\n• You can also arrange warehouse pickup for immediate collection."
+    response: "📍 **Our Location:**\nWe are located at **Industrial Area 6, Block Side of 1 to 10 Market, Sharjah, United Arab Emirates**.\n• Hours: Saturday – Thursday, 8:00 AM – 8:00 PM\n• Fast dispatches to all UAE locations daily.\n• You can also arrange warehouse pickup for immediate collection."
   },
   {
     keywords: ['cleaning', 'chemical', 'sanitizer', 'detergent', 'disposable', 'supplies'],
@@ -42,7 +42,7 @@ const KNOWLEDGE_BASE = [
   },
   {
     keywords: ['human', 'person', 'agent', 'call', 'talk', 'whatsapp', 'sales', 'representative', 'phone'],
-    response: "📞 **Connect with our Live Team:**\nOur sales engineers are active right now on WhatsApp (+971 55 238 3697) and ready to answer your technical questions or send formal PDF quotations."
+    response: "📞 **Connect with our Live Team:**\nOur sales engineers are active right now on WhatsApp (+971 55 193 7833) and ready to answer your technical questions or send formal PDF quotations."
   }
 ];
 
