@@ -30,7 +30,7 @@ export default function App() {
       name: "Corrugated Boxes",
       desc: "Custom sizes for every need.",
       count: "150+ Items",
-      image: "https://images.unsplash.com/photo-1607166452427-7e4477c1e4d0?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1597484661910-349282319985?q=80&w=800&auto=format&fit=crop",
       cta: "Explore Boxes →"
     },
     {
@@ -44,7 +44,7 @@ export default function App() {
       name: "Bubble Wrap",
       desc: "Premium protection rolls.",
       count: "60+ Items",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1574345513907-797746416aa8?q=80&w=800&auto=format&fit=crop",
       cta: "Explore Wrap →"
     },
     {
@@ -75,7 +75,7 @@ export default function App() {
     {
       name: "Heavy Duty Corrugated Box",
       price: "From AED 45",
-      image: "https://images.unsplash.com/photo-1607166452427-7e4477c1e4d0?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1597484661910-349282319985?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
       badgeType: "new",
       rating: 4.9,
@@ -93,7 +93,7 @@ export default function App() {
     {
       name: "Bubble Wrap Roll 100m",
       price: "From AED 15",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1574345513907-797746416aa8?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
       badgeType: "new",
       rating: 4.7,
