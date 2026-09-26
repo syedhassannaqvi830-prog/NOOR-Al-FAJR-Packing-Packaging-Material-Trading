@@ -20,9 +20,9 @@ const FacebookIcon = ({ size = 20, className = "" }) => (
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const whatsappLink = "https://api.whatsapp.com/send?phone=%2B971551937833&text=Hi%20NOOR%20Al%20FAJR!%20I%20need%20a%20quote%20for%20packaging%20materials.";
-  const phone = "+971 55 193 7833";
-  const email = "info@nooralfajr.com";
+  const whatsappLink = "https://api.whatsapp.com/send?phone=%2B971552383697&text=Hi%20NOOR%20Al%20FAJR!%20I%20need%20a%20quote%20for%20packaging%20materials.";
+  const phone = "+971 55 238 3697";
+  const email = "nooralfajrpck@gmail.com";
   const facebookLink = "https://www.facebook.com/profile.php?id=61577771881337";
 
   const categories = [
@@ -30,7 +30,7 @@ export default function App() {
       name: "Corrugated Boxes",
       desc: "Custom sizes for every need.",
       count: "150+ Items",
-      image: "https://images.unsplash.com/photo-1597484661910-349282319985?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1607166452427-7e4477c1e4d0?q=80&w=800&auto=format&fit=crop",
       cta: "Explore Boxes →"
     },
     {
@@ -44,7 +44,7 @@ export default function App() {
       name: "Bubble Wrap",
       desc: "Premium protection rolls.",
       count: "60+ Items",
-      image: "https://images.unsplash.com/photo-1574345513907-797746416aa8?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop",
       cta: "Explore Wrap →"
     },
     {
@@ -75,7 +75,7 @@ export default function App() {
     {
       name: "Heavy Duty Corrugated Box",
       price: "From AED 45",
-      image: "https://images.unsplash.com/photo-1597484661910-349282319985?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1607166452427-7e4477c1e4d0?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
       badgeType: "new",
       rating: 4.9,
@@ -93,7 +93,7 @@ export default function App() {
     {
       name: "Bubble Wrap Roll 100m",
       price: "From AED 15",
-      image: "https://images.unsplash.com/photo-1574345513907-797746416aa8?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600&auto=format&fit=crop",
       badge: "NEW",
       badgeType: "new",
       rating: 4.7,
@@ -887,8 +887,8 @@ export default function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://maps.google.com/?q=Industrial+Area+6+Block+Side+of+1+to+10+Market+Sharjah+UAE" target="_blank" rel="noopener noreferrer">
-                    <MapPin size={14} /> Industrial Area 6, Block Side of 1 to 10 Market, Sharjah
+                  <a href="https://maps.google.com/?q=Industrial+Area+6+Sharjah+UAE" target="_blank" rel="noopener noreferrer">
+                    <MapPin size={14} /> Industrial Area 6, Sharjah
                   </a>
                 </li>
               </ul>
@@ -915,7 +915,7 @@ export default function App() {
       </motion.a>
 
       {/* AI Chat Assistant */}
-      <ChatAssistant whatsappNumber="+971551937833" />
+      <ChatAssistant whatsappNumber="+971552383697" />
     </div>
   );
 }
