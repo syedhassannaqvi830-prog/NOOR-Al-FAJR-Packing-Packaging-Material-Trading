@@ -322,32 +322,44 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
   background: var(--white);
   border-bottom: 1px solid var(--border-light);
-  height: var(--header-height);
+  height: auto; /* Changed from height var(--header-height) */
+  min-height: var(--header-height);
   display: flex;
   align-items: center;
   position: sticky;
   top: var(--announcement-height);
   z-index: 100;
+  padding: 10px 0;
 }
 
 .header-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px; /* Reduced side padding */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 10px; /* Reduced gap */
 }
 
 .brand-logo {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.1rem; /* Slightly smaller */
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   color: var(--obsidian);
   text-decoration: none;
+  line-height: 1.2;
+}
+
+.action-btn {
+  display: none; /* Hide Search/Account for now to save space */
+}
+
+.header-whatsapp-btn, .header-facebook-btn {
+  width: 36px;
+  height: 36px;
 }
 
 .mobile-menu-btn {
@@ -670,11 +682,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-trust-bar {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   margin-top: 16px;
-  flex-wrap: wrap;
 }
 
 .trust-item {
@@ -697,9 +708,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .trust-divider {
-  width: 1px;
-  height: 32px;
-  background: rgba(255, 255, 255, 0.15);
+  display: none;
 }
 
 /* Hero Visual Card */
