@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOOR Al-FAJR - Premium Packaging Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e40af;
+            --accent: #ff6b35;
+            --accent-light: #ffa500;
+            --text: #f1f5f9;
+            --text-dark: #0f172a;
+            --bg-dark: #0a0e27;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATED BACKGROUND ===== */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, #0f172a, #1e40af, #ff6b35, #0a0e27);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            z-index: -2;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 39, 0.8);
+            z-index: -1;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 14, 39, 0.7);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: rgba(241, 245, 249, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b35, #ffa500);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav a:hover {
+            color: #ff6b35;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+            nav {
+                padding: 0 1rem;
+            }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: 10%;
+            right: 5%;
+            animation: float 10s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(30px) scale(1.05); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #fff, #ff6b35, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 0.1s backwards;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(241, 245, 249, 0.8);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ff6b35;
+            border-color: #ff6b35;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-4px);
+        }
+
+        /* ===== FLOATING CARDS ===== */
+        .floating-cards {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .card-float {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 20px;
+            animation: float 6s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        section h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(241, 245, 249, 0.6);
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: rgba(30, 64, 175, 0.05);
+            border-top: 1px solid rgba(255, 107, 53, 0.1);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ff6b35;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: rgba(241, 245, 249, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1rem;
+            border-radius: 12px;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateX(10px);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .feature-item i {
+            color: #ff6b35;
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-item p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products {
+            background: var(--bg-dark);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(255, 107, 53, 0.05));
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, transparent 70%);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            border-color: rgba(255, 107, 53, 0.5);
+            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.2);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+        }
+
+        .product-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s;
+            display: inline-block;
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .product-card p {
+            color: rgba(241, 245, 249, 0.6);
+            line-height: 1.6;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.05), rgba(255, 107, 53, 0.02));
+            border-top: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 107, 53, 0.1), transparent);
+            transition: width 0.4s;
+            border-radius: 16px;
+            pointer-events: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 107, 53, 0.5);
+            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
+        }
+
+        .service-card:hover::after {
+            width: 100%;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: rgba(241, 245, 249, 0.6);
+            line-height: 1.7;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--bg-dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(30, 64, 175, 0.1));
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            color: rgba(241, 245, 249, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #ffa500;
+        }
+
+        /* ===== SERVICE AREAS ===== */
+        .service-areas {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 16px;
+        }
+
+        .service-areas h3 {
+            color: #ff6b35;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .area-tag {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 165, 0, 0.1));
+            color: #ff6b35;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .area-tag:hover {
+            background: linear-gradient(135deg, #ff6b35, #ffa500);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.1));
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ff6b35;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: rgba(241, 245, 249, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            color: rgba(241, 245, 249, 0.6);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .products-grid,
+            .services-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                gap: 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                NOOR Al-FAJR
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="floating-cards"></div>
+        <div class="hero-content">
+            <h1>Premium Packaging Solutions for Modern Businesses</h1>
+            <p>Custom packaging, eco-friendly materials, and professional branding services across the UAE</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-phone"></i> Get Quote Now
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-box"></i> Explore Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About NOOR Al-FAJR</h2>
+            <div class="section-subtitle">Leading packaging supplier in the UAE since 2020</div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Your Trusted Packaging Partner</h3>
+                    <p>NOOR Al-FAJR is a leading supplier of comprehensive packaging solutions. Based in Sharjah Industrial Area, we serve businesses across all emirates with quality products and professional services.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Wide Product Range</strong> - Everything from boxes to tapes</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <p><strong>Eco-Friendly Options</strong> - Sustainable packaging solutions</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-truck"></i>
+                            <p><strong>Fast Delivery</strong> - Same-day delivery across UAE</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <p><strong>24/7 Support</strong> - Multilingual customer service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Our Services</h3>
+                    <p>We provide comprehensive solutions tailored to your business needs:</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-cube"></i>
+                            <p><strong>Custom Packaging Design</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette"></i>
+                            <p><strong>Branding & Labeling Services</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-boxes"></i>
+                            <p><strong>Bulk Order Solutions</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ship"></i>
+                            <p><strong>Cargo Packaging</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="section-subtitle">Complete range of packaging materials and solutions</div>
+
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-icon">📦</div>
+                    <h3>Corrugated Boxes</h3>
+                    <p>Custom and standard corrugated boxes for all shipping needs</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">🛍️</div>
+                    <h3>Plastic & Paper Bags</h3>
+                    <p>Quality bags for retail and wholesale distribution</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">🌊</div>
+                    <h3>Bubble Wrap & Films</h3>
+                    <p>Protective materials for fragile items</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">🧤</div>
+                    <h3>Safety Gloves</h3>
+                    <p>Industrial and workplace safety gloves</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">📄</div>
+                    <h3>Foam & Thermocol</h3>
+                    <p>Premium protective cushioning materials</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">🎁</div>
+                    <h3>Custom Packaging</h3>
+                    <p>Personalized and branded packaging solutions</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">📦</div>
+                    <h3>Specialty Boxes</h3>
+                    <p>Laptop, electronic, and appliance boxes</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">🎯</div>
+                    <h3>Tapes & Strapping</h3>
+                    <p>Professional sealing and securing materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="section-subtitle">Comprehensive solutions for all your packaging needs</div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable delivery to all UAE emirates with competitive rates</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-store"></i></div>
+                    <h3>Showroom Shopping</h3>
+                    <p>Visit our Sharjah showroom to browse and purchase products</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-box"></i></div>
+                    <h3>In-Store Pickup</h3>
+                    <p>Place orders online and pick up at your convenience</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Design Services</h3>
+                    <p>Professional packaging design and branding solutions</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Eco-Friendly Options</h3>
+                    <p>Sustainable and environmentally responsible packaging</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Bulk Orders</h3>
+                    <p>Special pricing for large volume orders and corporate clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="section-subtitle">Multiple ways to reach us</div>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Visit Us</h3>
+                    <p>Industrial Area 6, Backside of 1-10 Discount Market<br>Sharjah, UAE 39000</p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+971552383697">+971 55 238 3697</a></p>
+                    <p style="font-size: 0.9rem; color: rgba(241, 245, 249, 0.5);">Available 24/7</p>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:nooralfajrpck@gmail.com">nooralfajrpck@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; color: rgba(241, 245, 249, 0.5);">Response within 24h</p>
+                </div>
+            </div>
+
+            <div class="service-areas">
+                <h3><i class="fas fa-map"></i> Service Areas - All 8 Emirates</h3>
+                <div class="areas-grid">
+                    <div class="area-tag">🏙️ Sharjah</div>
+                    <div class="area-tag">🌆 Dubai</div>
+                    <div class="area-tag">🏢 Abu Dhabi</div>
+                    <div class="area-tag">⛰️ Fujairah</div>
+                    <div class="area-tag">🏔️ Ras Al Khaimah</div>
+                    <div class="area-tag">🏘️ Ajman</div>
+                    <div class="area-tag">🌴 Umm Al Qaiwain</div>
+                    <div class="area-tag">🎯 Al Ain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <a href="#about">Company Overview</a>
+                <a href="#products">Our Products</a>
+                <a href="#services">Services</a>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#contact">Contact Us</a>
+                <a href="tel:+971552383697">Call Us</a>
+                <a href="mailto:nooralfajrpck@gmail.com">Email Us</a>
+            </div>
+            <div class="footer-section">
+                <h4>Languages</h4>
+                <a href="#">English</a>
+                <a href="#">Urdu</a>
+                <a href="#">Hindi</a>
+                <a href="#">Arabic</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NOOR Al-FAJR Packing & Packaging Material Trading. All rights reserved.</p>
+            <p>Industrial Area 6, Sharjah, UAE | +971 55 238 3697</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('nav a').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = a.getAttribute('href');
+                if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Add parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            const floatingCards = document.querySelectorAll('.card-float');
+            floatingCards.forEach((card, index) => {
+                const speed = 20 + index * 5;
+                card.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
